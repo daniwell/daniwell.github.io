@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>AIDN | 404 Nyanco Found</title>
+
+<link href='https://fonts.googleapis.com/css?family=Lato:300,900' rel='stylesheet' type='text/css'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
+<style type="text/css">
+<!--
+* {
+    font-family:'Lato';
+    margin:0;
+    padding:0;
+}
+html, body {
+    width:100%;
+    height:100%;
+    text-align:center;
+    letter-spacing:0.2rem;
+}
+#container {
+    width:100%;
+	position: absolute;
+	top:50%;
+	-webkit-transform:translate(0,-50%); -ms-transform:translate(0,-50%); transform:translate(0,-50%);
+	z-index:1;
+}
+h1 {
+	font-size:1.5rem;
+	font-size:calc(1.2rem + 2vmin);
+    font-weight:normal;
+}
+#bar {
+    border-bottom:solid 1px #000;
+    width:0;
+    margin-top:10px;
+}
+p {
+	font-size:0.9rem;
+    margin-top:10px;
+}
+-->
+</style>
+<script type="text/javascript">
+window.onload = function()
+{
+    var bar = document.getElementById("bar");
+    var time = Date.now();
+    var id = setInterval(function(){
+        var t = Date.now() - time;
+        var r = Math.min(t / 3000, 1) * 100;
+        bar.style.width = r + "%";
+
+        if (100 <= r) {
+            clearInterval(id);
+            location.href = "http://aidn.jp/";
+        }
+    }, 10);
+};
+</script>
+</head>
+
+<body>
+<div id="container">
+    <h1>404 Nyanco Found</h1>
+    <div id="bar"></div>
+    <p>Redirect to top page.</p>
+</div>
+</body>
+</html>
